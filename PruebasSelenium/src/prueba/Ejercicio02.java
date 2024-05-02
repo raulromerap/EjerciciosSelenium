@@ -1,5 +1,7 @@
 package prueba;
 
+import static org.junit.jupiter.api.Assertions.assertEquals;
+
 import org.junit.jupiter.api.Test;
 import org.openqa.selenium.By;
 import org.openqa.selenium.WebDriver;
@@ -8,9 +10,10 @@ import org.openqa.selenium.firefox.FirefoxDriver;
 
 class Ejercicio02 {
 
+	static WebDriver  driver = new FirefoxDriver();
+	
 	@Test
 	void testValido01() {
-		WebDriver driver = new FirefoxDriver();
 		
 		driver.get("https://elenarivero.github.io/Ejercicio2/index.html");
 		
@@ -21,11 +24,14 @@ class Ejercicio02 {
 		numBox.sendKeys("200");
 		dirBox.sendKeys("+");
 		subButton.click();
+		
+		WebElement correcto = driver.findElement(By.cssSelector("h3"));
+		String textCorrecto = correcto.getText();
+		
+		assertEquals("EMPLEADO AÑADIDO CORRECTAMENTE", textCorrecto);
 	}
-
 	@Test
 	void testValido02() {
-		WebDriver driver = new FirefoxDriver();
 		
 		driver.get("https://elenarivero.github.io/Ejercicio2/index.html");
 		
@@ -36,11 +42,14 @@ class Ejercicio02 {
 		numBox.sendKeys("001");
 		dirBox.sendKeys("+");
 		subButton.click();
+		WebElement correcto = driver.findElement(By.cssSelector("h3"));
+		String textCorrecto = correcto.getText();
+		
+		assertEquals("EMPLEADO AÑADIDO CORRECTAMENTE", textCorrecto);
 	}
 	
 	@Test
 	void testValido03() {
-		WebDriver driver = new FirefoxDriver();
 		
 		driver.get("https://elenarivero.github.io/Ejercicio2/index.html");
 		
@@ -51,11 +60,14 @@ class Ejercicio02 {
 		numBox.sendKeys("152");
 		dirBox.sendKeys("+");
 		subButton.click();
+		WebElement correcto = driver.findElement(By.cssSelector("h3"));
+		String textCorrecto = correcto.getText();
+		
+		assertEquals("EMPLEADO AÑADIDO CORRECTAMENTE", textCorrecto);
 	}
 	
 	@Test
 	void testValido04() {
-		WebDriver driver = new FirefoxDriver();
 		
 		driver.get("https://elenarivero.github.io/Ejercicio2/index.html");
 		
@@ -66,11 +78,14 @@ class Ejercicio02 {
 		numBox.sendKeys("999");
 		dirBox.sendKeys("+");
 		subButton.click();
+		WebElement correcto = driver.findElement(By.cssSelector("h3"));
+		String textCorrecto = correcto.getText();
+		
+		assertEquals("EMPLEADO AÑADIDO CORRECTAMENTE", textCorrecto);
 	}
 	
 	@Test
 	void testNoValido01() {
-		WebDriver driver = new FirefoxDriver();
 		
 		driver.get("https://elenarivero.github.io/Ejercicio2/index.html");
 		
@@ -87,7 +102,6 @@ class Ejercicio02 {
 
 	@Test
 	void testNoValido02() {
-		WebDriver driver = new FirefoxDriver();
 		
 		driver.get("https://elenarivero.github.io/Ejercicio2/index.html");
 		
@@ -106,7 +120,6 @@ class Ejercicio02 {
 	
 	@Test
 	void testNoValido03() {
-		WebDriver driver = new FirefoxDriver();
 		
 		driver.get("https://elenarivero.github.io/Ejercicio2/index.html");
 		
@@ -123,7 +136,6 @@ class Ejercicio02 {
 	
 	@Test
 	void testNoValido04() {
-		WebDriver driver = new FirefoxDriver();
 		
 		driver.get("https://elenarivero.github.io/Ejercicio2/index.html");
 		
@@ -141,7 +153,6 @@ class Ejercicio02 {
 	
 	@Test
 	void testNoValido05() {
-		WebDriver driver = new FirefoxDriver();
 		
 		driver.get("https://elenarivero.github.io/Ejercicio2/index.html");
 		
@@ -160,7 +171,6 @@ class Ejercicio02 {
 	
 	@Test
 	void testNoValido06() {
-		WebDriver driver = new FirefoxDriver();
 		
 		driver.get("https://elenarivero.github.io/Ejercicio2/index.html");
 		
@@ -177,7 +187,6 @@ class Ejercicio02 {
 	
 	@Test
 	void testNoValido07() {
-		WebDriver driver = new FirefoxDriver();
 		
 		driver.get("https://elenarivero.github.io/Ejercicio2/index.html");
 		
@@ -196,7 +205,6 @@ class Ejercicio02 {
 	
 	@Test
 	void testNoValido08() {
-		WebDriver driver = new FirefoxDriver();
 		
 		driver.get("https://elenarivero.github.io/Ejercicio2/index.html");
 		
@@ -215,7 +223,6 @@ class Ejercicio02 {
 	
 	@Test
 	void testNoValido09() {
-		WebDriver driver = new FirefoxDriver();
 		
 		driver.get("https://elenarivero.github.io/Ejercicio2/index.html");
 		
@@ -234,7 +241,6 @@ class Ejercicio02 {
 	
 	@Test
 	void testNoValido010() {
-		WebDriver driver = new FirefoxDriver();
 		
 		driver.get("https://elenarivero.github.io/Ejercicio2/index.html");
 		
@@ -252,7 +258,6 @@ class Ejercicio02 {
 	
 	@Test
 	void testNoValido011() {
-		WebDriver driver = new FirefoxDriver();
 		
 		driver.get("https://elenarivero.github.io/Ejercicio2/index.html");
 		
