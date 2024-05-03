@@ -9,8 +9,6 @@ import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.WebElement;
 import org.openqa.selenium.firefox.FirefoxDriver;
 
-import dev.failsafe.internal.util.Assert;
-
 class Ejercicio03 {
 	
 	static WebDriver driver = new FirefoxDriver();
